@@ -44,7 +44,7 @@ def make_cluster_plot(labels, centroids, mat, k, title, fname):
     # labels, centroids = run_kmeans(mat, k)
 
     # t-SNE for visualisation
-    tsne = TSNE(n_components=2, perplexity=8, random_state=42, max_iter=2000)
+    tsne = TSNE(n_components=2, perplexity=8, random_state=42, n_iter=2000)
     coords = tsne.fit_transform(mat)
 
     fig, ax = plt.subplots(figsize=(13, 9))
